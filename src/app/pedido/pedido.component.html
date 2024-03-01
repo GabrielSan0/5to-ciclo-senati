@@ -1,0 +1,163 @@
+<div class="container">
+    <div class="alert alert-warning titulos" role="alert">
+        <h2>Opciones de pedidos</h2>
+    </div>
+
+
+    <div class="container2">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://elcomercio.pe/resizer/3EEDUs9qsbzt2cwpYdj77xyZIPc=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZJ5LQRJARRAO3DIBR4EXJQXIAU.jpg" alt="imagen de pollo a la brasa" class="img-fluid imgpedido">
+            </div>
+            <div class="col-md-6">
+                <h3>Datos del pedido:</h3>
+                <ul>
+                    <li>un pollo a la brasa</li>
+                    <li>una porcion de papas fritas</li>
+                    <li>ensalda familiar</li>
+                </ul>
+                <h5>Cantidad de pedido</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contador">
+                            <button class="butoncontador">
+                                -
+                            </button>
+                            <p>
+                                1
+                            </p>
+                            <button class="butoncontador">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button (click)="pedidoselecionado(2)" type="button" class="btn btn-primary">Selecionar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container1">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="data:image/jpeg;base64,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opOmUdLobamoAbkCwC/hUYFzbHYT0HovRqenTaii5+JrZP8AtJel0q012oLD9T85InoJKKqKpHDKTk7Yn2IklRERAEREAREQBERAEREAREQCr0OrDGovdHZSPrj7i02sBficz10tQ1vvFNhUUH0JXwsD9Ap+stNL1MMPFg/p9xJcW1aKNpMsLKMgAfITJnmlat+Cv3g02b8QHyuT/SUal6JtEbX6jG0ZJwAOTN+g0vuwoPxM12/Wwm6hpkTIF2/Mcn/b6TaF3MD2Gf4lowp2w2TJremDyLzZEFiC+gH4TaR307jteW0+SykyKKViRyJCTRUhUaqtNRUYWZ9viIHa/wBvtOlKgzBtOp5USdyFFEyjykatQUzo/wDJJ+UT5/kE/KJO9EUzhtT0lCeBIlHo4VroLNa2ObHtj5n7z0VdFTH4F+wm1UA4AEpLbLtF4ykumefaX2ZcsStOxP4m/T4sy40vsiOajD5KP6n+J1kSLrpBtvshaPplOl8CC/mcn7mToiCBERAEREAREQBERAEREAREQBERAEREAgdU6ctdNrYIN1YcqfMTm20NWkbMt1HDrkEevl9Z2USYyorKKZzGmrSwpVJZe4Qm5UX+QmSoBwAPkJo5r0UUGvJHpox9B6ySigCwmU+zNuzRKhERIJEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREA/9k=" alt="imagen de pollo a la brasa" class="img-fluid imgpedido">
+            </div>
+            <div class="col-md-6">
+                <h3>Datos del pedido:</h3>
+                <ul>
+                    <li>1/4 de pollo a la brasa</li>
+                    <li>una porcion de papas fritas</li>
+                    <li>Chaufa</li>
+                </ul>
+                <h5>Cantidad de pedido</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contador">
+                            <button class="butoncontador">
+                                -
+                            </button>
+                            <p>
+                                1
+                            </p>
+                            <button class="butoncontador">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button (click)="pedidoselecionado(1)" type="button" class="btn btn-primary">Selecionar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container3">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://i.pinimg.com/736x/32/b0/99/32b0990902ce919e19adb0ac2ad71cb3.jpg" alt="imagen de pollo a la brasa" class="img-fluid imgpedido">
+            </div>
+            <div class="col-md-6">
+                <h3>Datos del pedido:</h3>
+                <ul>
+                    <li>Salchipapa</li>
+                    <li>Huevo</li>
+                 
+                </ul>
+                <h5>Cantidad de pedido</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contador">
+                            <button class="butoncontador">
+                                -
+                            </button>
+                            <p>
+                                1
+                            </p>
+                            <button class="butoncontador">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button (click)="pedidoselecionado(3)" type="button" class="btn btn-primary">Selecionar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  
+    <div class="container4">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/fd/6b/ff/pollo-broaster.jpg" alt="imagen de pollo a la brasa" class="img-fluid imgpedido">
+            </div>
+            <div class="col-md-6">
+                <h3>Datos del pedido:</h3>
+                <ul>
+                    <li>Un pecho broster</li>
+                    <li>una porcion de papas fritas</li>
+                    <li>ensalda familiar</li>
+                </ul>
+                <h5>Cantidad de pedido</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contador">
+                            <button class="butoncontador">
+                                -
+                            </button>
+                            <p>
+                                1
+                            </p>
+                            <button class="butoncontador">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button (click)="pedidoselecionado(4)" type="button" class="btn btn-primary">Selecionar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    
